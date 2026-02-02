@@ -210,3 +210,71 @@ document.addEventListener('keydown', (e) => {
         closeModal();
     }
 });
+
+// Rental Analysis Form Validation
+const rentalAnalysisForm = document.getElementById('rentalAnalysisForm');
+const modalPhoneInput = document.getElementById('modal-phone');
+const modalEmailInput = document.getElementById('modal-email');
+
+// Phone number formatting for modal
+if (modalPhoneInput) {
+    modalPhoneInput.addEventListener('input', (e) => {
+        let value = e.target.value.replace(/\D/g, '');
+        if (value.length > 0) {
+            if (value.length <= 3) {
+                value = `(${value}`;
+            } else if (value.length <= 6) {
+                value = `(${value.slice(0, 3)}) ${value.slice(3)}`;
+            } else {
+                value = `(${value.slice(0, 3)}) ${value.slice(3, 6)}-${value.slice(6, 10)}`;
+            }
+        }
+        e.target.value = value;
+    });
+}
+
+// Form validation
+if (rentalAnalysisForm) {
+    rentalAnalysisForm.addEventListener('submit', (e) => {
+        const phone = modalPhoneInput.value.replace(/\D/g, '');
+        const email = modalEmailInput.value;
+        let isValid = true;
+        let errorMessage = '';
+
+        // Clear previous error styles
+        modalPhoneInput.style.borderColor = '';
+        modalEmailInput.style.borderColor = '';
+
+        // Validate phone (must have at least 10 digits)
+        if (phone.length < 10) {
+            isValid = false;
+            errorMessage = 'Please enter a valid 10-digit phone number.';
+            modalPhoneInput.style.borderColor = '#ef4444';
+            modalPhoneInput.focus();
+        }
+
+        // Validate email (must contain @)
+        if (isValid && !email.includes('@')) {
+            isValid = false;
+            errorMessage = 'Please enter a valid email address with @.';
+            modalEmailInput.style.borderColor = '#ef4444';
+            modalEmailInput.focus();
+        }
+
+        // Additional email validation (must have something before and after @)
+        if (isValid) {
+            const emailParts = email.split('@');
+            if (emailParts.length !== 2 || emailParts[0].length === 0 || emailParts[1].length < 3) {
+                isValid = false;
+                errorMessage = 'Please enter a valid email address.';
+                modalEmailInput.style.borderColor = '#ef4444';
+                modalEmailInput.focus();
+            }
+        }
+
+        if (!isValid) {
+            e.preventDefault();
+            alert(errorMessage);
+        }
+    });
+}
