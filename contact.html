@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Two Thumbs Up Property Management - Schedule your free consultation for property management in Dallas, Frisco, and Plano">
+    <title>Contact Us | Two Thumbs Up Property Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-icon">👍👍</span>
+                        <span class="logo-text">Two Thumbs Up<br><small>Property Management</small></span>
+                    </a>
+                </div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="why-choose-us.html">Why Choose Us</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="btn-nav active">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Let's discuss how we can help maximize your property's potential</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <form class="contact-form" id="contactForm" action="https://formsubmit.co/info@twothumbs-pm.com" method="POST">
+                    <h2 style="margin-bottom: 1.5rem; color: var(--text-dark);">Request Your Free Consultation</h2>
+                    <p style="margin-bottom: 2rem; color: var(--text-light);">Fill out the form below and we'll get back to you within 24 hours to schedule your consultation.</p>
+
+                    <!-- FormSubmit Configuration -->
+                    <input type="hidden" name="_subject" value="New Property Management Consultation Request - Contact Page">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="property-address">Property Address</label>
+                        <input type="text" id="property-address" name="property_address" placeholder="Street address, City, State, ZIP">
+                    </div>
+                    <div class="form-group">
+                        <label for="property-type">Property Type</label>
+                        <select id="property-type" name="property_type" style="width: 100%; padding: 0.75rem; border: 2px solid var(--border-color); border-radius: 6px; font-family: inherit; font-size: 1rem;">
+                            <option value="">Select property type</option>
+                            <option value="single-family">Single Family Home</option>
+                            <option value="townhouse">Townhouse</option>
+                            <option value="condo">Condominium</option>
+                            <option value="multi-family">Multi-Family (2-4 units)</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="current-status">Current Status</label>
+                        <select id="current-status" name="current_status" style="width: 100%; padding: 0.75rem; border: 2px solid var(--border-color); border-radius: 6px; font-family: inherit; font-size: 1rem;">
+                            <option value="">Select current status</option>
+                            <option value="vacant">Property is Vacant</option>
+                            <option value="occupied-tenant">Occupied with Current Tenant</option>
+                            <option value="owner-occupied">Owner Occupied (Planning to Rent)</option>
+                            <option value="other-management">Currently with Another Management Company</option>
+                            <option value="self-managed">Self-Managed</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">How can we help you? *</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Tell us about your property management needs..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="preferred-contact">Preferred Contact Method</label>
+                        <select id="preferred-contact" name="preferred_contact" style="width: 100%; padding: 0.75rem; border: 2px solid var(--border-color); border-radius: 6px; font-family: inherit; font-size: 1rem;">
+                            <option value="phone">Phone</option>
+                            <option value="email">Email</option>
+                            <option value="either">Either</option>
+                        </select>
+                    </div>
+                    <!-- Honeypot for spam protection -->
+                    <input type="text" name="_honey" style="display:none">
+
+                    <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+                    <p style="margin-top: 1rem; font-size: 0.875rem; color: var(--text-light); text-align: center;">We respect your privacy and will never share your information.</p>
+                </form>
+
+                <div>
+                    <div class="contact-info">
+                        <h3>Get In Touch</h3>
+                        <div class="info-item">
+                            <span class="info-icon">📞</span>
+                            <div>
+                                <strong>Phone</strong>
+                                <a href="tel:+14695551234">(469) 555-1234</a>
+                                <p style="font-size: 0.875rem; margin-top: 0.25rem;">Mon-Fri: 9AM - 6PM</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">✉️</span>
+                            <div>
+                                <strong>Email</strong>
+                                <a href="mailto:info@twothumbs-pm.com">info@twothumbs-pm.com</a>
+                                <p style="font-size: 0.875rem; margin-top: 0.25rem;">We respond within 24 hours</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">📍</span>
+                            <div>
+                                <strong>Service Area</strong>
+                                <p>Dallas, Frisco, Plano<br>& surrounding areas</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">⏰</span>
+                            <div>
+                                <strong>Office Hours</strong>
+                                <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 2:00 PM<br>Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-info" style="margin-top: 2rem;">
+                        <h3>Emergency Maintenance</h3>
+                        <p style="margin-bottom: 1rem; color: var(--text-dark);">For current tenants experiencing maintenance emergencies:</p>
+                        <a href="tel:+14695559999" style="display: inline-flex; align-items: center; gap: 0.5rem; background: var(--primary-color); color: white; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600;">
+                            <span>🚨</span> Emergency Line: (469) 555-9999
+                        </a>
+                        <p style="margin-top: 1rem; font-size: 0.875rem; color: var(--text-light);">Available 24/7 for urgent maintenance issues</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="content-section" style="background: var(--bg-light); padding: 4rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Service Area</h2>
+                <p>Proudly serving the Dallas-Fort Worth metroplex</p>
+            </div>
+            <div style="background: white; border-radius: 12px; padding: 2rem; box-shadow: var(--shadow-md);">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; text-align: center;">
+                    <div>
+                        <h3 style="color: var(--primary-color); font-size: 2rem; margin-bottom: 0.5rem;">Dallas</h3>
+                        <p style="color: var(--text-light);">Urban & Suburban Properties</p>
+                    </div>
+                    <div>
+                        <h3 style="color: var(--primary-color); font-size: 2rem; margin-bottom: 0.5rem;">Frisco</h3>
+                        <p style="color: var(--text-light);">Fast-Growing Communities</p>
+                    </div>
+                    <div>
+                        <h3 style="color: var(--primary-color); font-size: 2rem; margin-bottom: 0.5rem;">Plano</h3>
+                        <p style="color: var(--text-light);">Established Neighborhoods</p>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 2rem; color: var(--text-light);">We also serve surrounding areas including McKinney, Allen, Richardson, Carrollton, and more.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Quick answers to common questions</p>
+            </div>
+            <div class="service-list">
+                <div class="service-item">
+                    <h3>What are your management fees?</h3>
+                    <p>We charge a competitive percentage of collected rent with no hidden fees. Contact us for a detailed quote tailored to your property. We believe in transparent pricing with no surprises.</p>
+                </div>
+                <div class="service-item">
+                    <h3>How quickly can you rent my property?</h3>
+                    <p>On average, we lease properties within 2-3 weeks, though this varies based on market conditions, property condition, and pricing. Our marketing strategy and local expertise help minimize vacancy periods.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Do you handle maintenance and repairs?</h3>
+                    <p>Yes, we coordinate all maintenance and repairs using our network of licensed, insured contractors. We handle everything from routine maintenance to emergency repairs, with 24/7 availability.</p>
+                </div>
+                <div class="service-item">
+                    <h3>What makes you different from other property management companies?</h3>
+                    <p>We combine local expertise, dedicated property managers, transparent reporting, and technology-driven efficiency. Every owner is assigned a specific manager who knows their property and goals personally.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Is there a contract or can I cancel anytime?</h3>
+                    <p>We typically work on 12-month agreements, but we're flexible based on your needs. Contact us to discuss the terms that work best for your situation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="features" style="padding: 4rem 0;">
+        <div class="container" style="text-align: center;">
+            <h2 style="margin-bottom: 1rem;">Ready to Experience Stress-Free Property Management?</h2>
+            <p style="font-size: 1.125rem; color: var(--text-light); margin-bottom: 2rem;">Schedule your free consultation today and discover how we can help you achieve your investment goals.</p>
+            <a href="#contactForm" class="btn btn-primary" style="font-size: 1.125rem; padding: 1rem 2.5rem;">Get Your Free Consultation</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Two Thumbs Up Property Management</h4>
+                    <p>Professional residential property management services in the Dallas-Fort Worth metroplex.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="why-choose-us.html">Why Choose Us</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Service Areas</h4>
+                    <ul>
+                        <li>Dallas, TX</li>
+                        <li>Frisco, TX</li>
+                        <li>Plano, TX</li>
+                        <li>Surrounding Areas</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><a href="tel:+14695551234">(469) 555-1234</a></li>
+                        <li><a href="mailto:info@twothumbs-pm.com">info@twothumbs-pm.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Two Thumbs Up Property Management. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
