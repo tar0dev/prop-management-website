@@ -245,10 +245,10 @@ if (rentalAnalysisForm) {
         modalPhoneInput.style.borderColor = '';
         modalEmailInput.style.borderColor = '';
 
-        // Validate phone (must have at least 10 digits)
-        if (phone.length < 10) {
+        // Validate phone (must have exactly 10 digits)
+        if (phone.length !== 10) {
             isValid = false;
-            errorMessage = 'Please enter a valid 10-digit phone number.';
+            errorMessage = 'Please enter a complete 10-digit phone number.';
             modalPhoneInput.style.borderColor = '#ef4444';
             modalPhoneInput.focus();
         }
